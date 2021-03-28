@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "name": "alura/alura-design-pattern",
+  "description": "Curso de Padrões de projeto.",
+  "autoload": {
+    "psr-4": {
+      "Alura\\DesignPattern\\": "src/"
+    }
+  }
+}
