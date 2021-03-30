@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+
+  app-web:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www
+    environment:
+      PHP_EXTENSION_PDOSQLITE: 1
+      PHP_EXTENSION_PDO_SQLITE: 1
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
