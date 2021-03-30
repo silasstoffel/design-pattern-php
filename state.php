@@ -38,4 +38,5 @@ echo PHP_EOL, 'Fechar ...', PHP_EOL;
 $orcamento->finalizar();
 
 echo sprintf('Estado Atual: %s ', $orcamento->estadoAtual);
+echo PHP_EOL, '---------------------------------------------------', PHP_EOL;
 
