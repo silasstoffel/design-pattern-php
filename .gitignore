@@ -1,5 +1,6 @@
 /vendor
 /dist
+/html
 /.idea
 Homestead.json
 Homestead.yaml
