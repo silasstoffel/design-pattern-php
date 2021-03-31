@@ -35,4 +35,4 @@ $manipulador = new GeradorPedidoHandler(
 );
 
 // A propost que executa tenha o mesmo comportamento, seja via CLI, form e API
-$manipulador->executar($pedido);
+$manipulador->executar($pedido, 'command');
