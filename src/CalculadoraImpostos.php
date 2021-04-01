@@ -4,12 +4,15 @@
 namespace Alura\DesignPattern;
 
 
-use Alura\DesignPattern\Impostos\Imposto;
-
 class CalculadoraImpostos
 {
 
-    public function calcular(Orcamento $orcamento, Imposto $imposto)
+    /**
+     * @param Orcamento $orcamento
+     * @param $imposto
+     * @return mixed
+     */
+    public function calcular(Orcamento $orcamento, $imposto)
     {
         return $imposto->calcular($orcamento);
     }
