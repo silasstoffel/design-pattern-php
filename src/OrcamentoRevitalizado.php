@@ -48,6 +48,7 @@ class OrcamentoRevitalizado implements Orcavel
 
     public function valor(): float
     {
+        sleep(1);
         return array_reduce(
             $this->itens,
             fn(float $somatorio, Orcavel $item) => $somatorio + $item->valor(),
