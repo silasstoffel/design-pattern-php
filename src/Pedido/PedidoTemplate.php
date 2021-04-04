@@ -1,15 +1,17 @@
 <?php
 
 
-namespace Alura\DesignPattern;
+namespace Alura\DesignPattern\Pedido;
 
 
-class PedidoBase
+use DateTimeInterface;
+
+class PedidoTemplate
 {
     private string $nomeCliente;
-    private \DateTimeInterface $dataFinalizacao;
+    private DateTimeInterface $dataFinalizacao;
 
-    public function __construct(string $nomeCliente, \DateTimeInterface $dataFinalizacao)
+    public function __construct(string $nomeCliente, DateTimeInterface $dataFinalizacao)
     {
         $this->nomeCliente = $nomeCliente;
         $this->dataFinalizacao = $dataFinalizacao;
@@ -21,7 +23,7 @@ class PedidoBase
     }
 
 
-    public function getDataFinalizacao(): \DateTimeInterface
+    public function getDataFinalizacao(): DateTimeInterface
     {
         return $this->dataFinalizacao;
     }

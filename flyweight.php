@@ -1,24 +1,20 @@
 <?php
 
 use Alura\DesignPattern\Orcamento;
-use Alura\DesignPattern\PedidoBase;
-use Alura\DesignPattern\PedidoRevitalizado;
+use Alura\DesignPattern\Pedido\CriadorPedido;
 
 require 'vendor/autoload.php';
 
 $pedidos = [];
-
-$hoje = new DateTimeImmutable();
-
-$pedidoBase = new PedidoBase(
-    sprintf('Cliente [%s]', 1),
-    $hoje
-);
+$criador = new CriadorPedido();
 
 for ($i = 0; $i < 9999; $i++) {
-    $pedido = new PedidoRevitalizado();
-    $pedido->orcamento = new Orcamento();
-    $pedido->base = $pedidoBase;
+    $orcamento = new Orcamento();
+    $pedido = $criador->criar(
+        'Silas Stoffel de Castro Moura',
+        date('Y-m-d'),
+        $orcamento
+    );
     $pedidos[] = $pedido;
 }
 
