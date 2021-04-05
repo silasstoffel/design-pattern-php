@@ -1,9 +1,12 @@
 /vendor
 /dist
 /html
+/tmp
+!/tmp/.gitkeep
 /.idea
 Homestead.json
 Homestead.yaml
 .env
 .phpunit.result.cache
+
 
