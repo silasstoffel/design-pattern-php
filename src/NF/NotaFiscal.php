@@ -5,6 +5,7 @@ namespace Alura\DesignPattern\NF;
 
 
 use Alura\DesignPattern\ItemOrcamento;
+use DateTimeImmutable;
 use DateTimeInterface;
 
 class NotaFiscal
@@ -29,5 +30,10 @@ class NotaFiscal
             },
             0
         );
+    }
+
+    public function __clone()
+    {
+        $this->dataEmissao = new DateTimeImmutable();
     }
 }
